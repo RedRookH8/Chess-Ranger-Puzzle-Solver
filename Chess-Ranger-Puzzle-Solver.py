@@ -102,7 +102,7 @@ def parse_fen(fen):
 
 # Prompt user to input chessboard setup
 print("You can enter the chessboard setup in either of these formats:")
-print("1. Standard chess notation: e.g., 'Na6 Rb6 Bc5'.")
+print("1. Standard chess notation: e.g., 'Na6 Rb6 Bc5 Bd6 Pd5 Rd8 Pd7 Be5 Be6 Pf7 Pg1'.")
 print("2. FEN format: e.g., 'rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1'")
 
 user_input = input("Enter your chessboard setup: ").strip()
