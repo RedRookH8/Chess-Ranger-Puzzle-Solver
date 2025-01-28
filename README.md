@@ -14,8 +14,10 @@ A Python program that solves the Chess Ranger Puzzle from https://www.puzzle-che
  How It Works
 
 1. Input Format
-   - Enter the initial positions of all pieces in standard chess notation.
+   - The program will ask you to type the list of pieces and their positions, separated by spaces.
+     Each piece is represented by its name (P for pawn N for Knight R for Rook B for Bishop Q for Queen K for King) followed by the position on the board (e.g., a6). After typing the pieces, press Enter
    - Example: `Na6 Rb6 Bc5 Bd6 Pd5 Rd8 Pd7 Be5 Be6 Pf7 Pg1`
+   - Input is case sensitive so qa6 will not work
 
 2. Output
    - The program outputs a sequence of moves that solve the puzzle.
