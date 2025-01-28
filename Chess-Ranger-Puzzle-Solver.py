@@ -82,15 +82,44 @@ def initialize_board(pieces):
         board[row][col] = piece_type
     return board
 
+def parse_fen(fen):
+    """Parse a FEN string and return the board state as a list of pieces."""
+    board = [[None for _ in range(8)] for _ in range(8)]
+    
+    # Take the board layout before the first space (ignoring turn and game state info)
+    board_part = fen.split(' ')[0]
+    
+    rows = board_part.split('/')
+    for i, row in enumerate(rows):
+        col = 0
+        for char in row:
+            if char.isdigit():  # Empty squares
+                col += int(char)
+            else:
+                board[i][col] = char  # Use the piece as is (keep case)
+                col += 1
+    return board
+
 # Prompt user to input chessboard setup
-print("Separate multiple pieces with spaces (e.g., 'Na6 Rb6 Bc5').")
-print("Press Enter when done.")
+print("You can enter the chessboard setup in either of these formats:")
+print("1. Standard chess notation: e.g., 'Na6 Rb6 Bc5'.")
+print("2. FEN format: e.g., 'rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1'")
 
 user_input = input("Enter your chessboard setup: ").strip()
-pieces = user_input.split()
 
-# Initialize the board
-board = initialize_board(pieces)
+# Check if the input contains '/' indicating it could be a FEN string
+if "/" in user_input:
+    user_input = user_input.upper()
+
+    board = parse_fen(user_input)  # User entered FEN format
+elif " " in user_input:
+    user_input = user_input.title()
+
+    pieces = user_input.split()  # User entered standard chess notation
+    board = initialize_board(pieces)
+else:
+    print("Invalid input format. Please try again.")
+    exit()
 
 # Solve the puzzle
 solved, solution = solve(board, [])
