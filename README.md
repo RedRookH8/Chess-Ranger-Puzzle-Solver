@@ -1,6 +1,6 @@
 # Chess Ranger Puzzle Solver
 
-A Python program that solves the Chess Ranger Puzzle from [Puzzle Chess](https://www.puzzle-chess.com/chess-ranger/).
+A Python program that solves the Chess Ranger Puzzle from [Puzzle Team](https://www.puzzle-chess.com/chess-ranger/).
 
 ---
 
