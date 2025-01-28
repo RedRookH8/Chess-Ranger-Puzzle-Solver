@@ -40,18 +40,3 @@ The program allows you to enter the chessboard setup in one of two formats:
 
 ---
 
-### Example Input:
-
-1. **Standard Chess Notation:**
-    ```
-    Enter your chessboard setup: Na6 Rb6 Bc5 Bd6 Pd5 Rd8 Pd7 Be5 Be6 Pf7 Pg1
-    ```
-
-2. **FEN Format:**
-    ```
-    Enter your chessboard setup: 8/5P2/6P1/2PPR3/1B1N4/1K3RB1/6r1/8 w - - 0 1
-    ```
-
----
-
-Let me know if you'd like further modifications or improvements!
